@@ -31,7 +31,7 @@
               </div>
               <div class="col">
                 <form id="upload-form">
-                  <form>
+                  <form enctype="multipart/form-data">
                     <div class="mb-3">
                       <label
                         for="exampleInputEmail1"
@@ -40,6 +40,7 @@
                       >
                       <input
                         type="email"
+                        name="email"
                         class="form-control"
                         id="exampleInputEmail1"
                         aria-describedby="emailHelp"
@@ -56,6 +57,7 @@
                       >
                       <input
                         type="password"
+                        name="password"
                         class="form-control"
                         id="exampleInputPassword1"
                       />
@@ -63,7 +65,11 @@
                         We'll never share your email with anyone else.
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">
+                    <button
+                      id="submit-btn"
+                      type="submit"
+                      class="btn btn-primary"
+                    >
                       Process file
                     </button>
                   </form>
@@ -108,5 +114,6 @@
     </main>
     <footer></footer>
     <script src="bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
