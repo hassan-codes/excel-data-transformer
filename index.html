@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <title>Data Transformer</title>
+  </head>
+  <body>
+    <main class="container py-4">
+      <header>
+        <h1>Data Transformer</h1>
+      </header>
+      <section id="upload-section" class="mb-4 py-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col text-bg-light">
+                <article>
+                  <h4>Instructions</h4>
+                  <ol>
+                    <li>Choose file to upload</li>
+                    <li>Select output format</li>
+                    <li>Click on <strong>Process file</strong></li>
+                  </ol>
+                </article>
+              </div>
+              <div class="col">
+                <form id="upload-form">
+                  <form>
+                    <div class="mb-3">
+                      <label
+                        for="exampleInputEmail1"
+                        class="form-label"
+                        >Select file</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                      />
+                      <div id="emailHelp" class="form-text">
+                        We'll never share your email with anyone else.
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label
+                        for="exampleInputPassword1"
+                        class="form-label"
+                        >Select output format</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="exampleInputPassword1"
+                      />
+                      <div id="emailHelp" class="form-text">
+                        We'll never share your email with anyone else.
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                      Process file
+                    </button>
+                  </form>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="output-section" class="mt-4 py-3">
+        <div class="card">
+          <h4 class="card-title text-center text-bg-light">
+            Output Section
+          </h4>
+          <div class="card-body">
+            <div class="row">
+              <table
+                class="table table-bordered table-striped table-hover"
+              >
+                <thead>
+                  <th>#</th>
+                  <th>Input file</th>
+                  <th>Output file</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>ldldl.xlsx</td>
+                    <td>lddldl.xslx</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Agric.xlsx</td>
+                    <td>Agric.xlsx</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="bootstrap.bundle.min.js"></script>
+  </body>
+</html>
