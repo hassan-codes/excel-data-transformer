@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="bootstrap.min.css" rel="stylesheet" />
     <title>Data Transformer</title>
   </head>
@@ -33,37 +30,47 @@
                 <form id="upload-form">
                   <form enctype="multipart/form-data">
                     <div class="mb-3">
-                      <label
-                        for="exampleInputEmail1"
-                        class="form-label"
+                      <label for="fileToUpload" class="form-label"
                         >Select file</label
                       >
                       <input
-                        type="email"
-                        name="email"
+                        type="file"
+                        accept=".xls,.xslx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                        name="fileToUpload"
                         class="form-control"
-                        id="exampleInputEmail1"
+                        id="fileToUpload"
                         aria-describedby="emailHelp"
+                        required
                       />
-                      <div id="emailHelp" class="form-text">
-                        We'll never share your email with anyone else.
-                      </div>
+                      <div
+                        id="fileToUpload_help"
+                        class="form-text"
+                        style="display: none"
+                      ></div>
                     </div>
                     <div class="mb-3">
                       <label
-                        for="exampleInputPassword1"
+                        for="selectFormat"
                         class="form-label"
+                        readonly
+                        aria-readonly="true"
                         >Select output format</label
                       >
-                      <input
-                        type="password"
-                        name="password"
-                        class="form-control"
-                        id="exampleInputPassword1"
-                      />
-                      <div id="emailHelp" class="form-text">
-                        We'll never share your email with anyone else.
-                      </div>
+                      <select
+                        id="selectFormat"
+                        name="selectFormat"
+                        class="form-select"
+                        aria-label="Select format"
+                      >
+                        <option selected value="SISU">SISU format</option>
+                        <option disabled value="MIS">MIS format</option>
+                        <option disabled value="UCM">UCM format</option>
+                      </select>
+                      <div
+                        id="selectFormat_help"
+                        class="form-text"
+                        style="display: none"
+                      ></div>
                     </div>
                     <button
                       id="submit-btn"
@@ -81,14 +88,10 @@
       </section>
       <section id="output-section" class="mt-4 py-3">
         <div class="card">
-          <h4 class="card-title text-center text-bg-light">
-            Output Section
-          </h4>
+          <h4 class="card-title text-center text-bg-light">Output Section</h4>
           <div class="card-body">
             <div class="row">
-              <table
-                class="table table-bordered table-striped table-hover"
-              >
+              <table class="table table-bordered table-striped table-hover">
                 <thead>
                   <th>#</th>
                   <th>Input file</th>

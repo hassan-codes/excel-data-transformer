@@ -18,6 +18,19 @@ uploadForm.addEventListener("submit", async (event) => {
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
   }
-  const data = await response.json();
-  console.log(data);
+  const responseJson = await response.json();
+
+  if (responseJson) {
+    uploadForm.reset();
+    submitBtn.innerHTML = `Process`;
+    submitBtn.removeAttribute("disabled");
+
+    if (responseJson.success === false) {
+      console.error(responseJson.errors);
+    } else {
+      console.log(responseJson);
+    }
+  }
+
+  event.preventDefault();
 });
